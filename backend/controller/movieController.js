@@ -23,3 +23,9 @@ export const postMovie = asyncHandler(async (req, res) => {
   await movie.save()
   res.status(201).json({ name, year, synopsis, imageUrl })
 })
+
+export const getMovies = asyncHandler(async (req, res) => {
+  const movies = await Movie.find().select('-createdAt -updatedAt')
+
+  res.status(200).json({ movies })
+})
