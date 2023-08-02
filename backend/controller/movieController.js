@@ -1,20 +1,17 @@
+import asyncHandler from 'express-async-handler'
 import Movie from '../models/Movie.js'
 
-export const postMovie = async (req, res) => {
+export const postMovie = asyncHandler(async (req, res) => {
   const { name, year, synopsis, imageUrl } = req.body
 
   if (!name || !year || !synopsis || !imageUrl) {
     res.status(400)
-    res.json({
-      message: 'Name, year, synopsis and imageUrl are all required fields'
-    })
-    return
+    throw new Error('Name, year, synopsis and imageUrl are all required fields')
   }
 
-  if (+year < 0 || +year > new Date().getFullYear()) {
+  if (+year < 1890 || +year > new Date().getFullYear()) {
     res.status(400)
-    res.json({ message: 'Year format is invalid' })
-    return
+    throw new Error('Year format is invalid')
   }
 
   const movie = new Movie()
@@ -25,4 +22,4 @@ export const postMovie = async (req, res) => {
 
   await movie.save()
   res.status(201).json({ name, year, synopsis, imageUrl })
-}
+})
