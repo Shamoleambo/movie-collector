@@ -6,6 +6,8 @@ import errorHandler, {
   noutFound
 } from './middlewares/errorHandlingMiddlewares.js'
 
+const PORT = process.env.PORT || 5000
+
 dotenv.config()
 
 const app = express()
@@ -17,4 +19,4 @@ app.use('/api/catalog', router)
 app.use(noutFound)
 app.use(errorHandler)
 
-app.listen(process.env.PORT, connectToDB)
+app.listen(PORT, connectToDB)
