@@ -1,0 +1,33 @@
+.header {
+  background-color: var(--second-bg-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+
+.pageTitle {
+  font-family: var(--rem-font);
+  color: var(--fourth-bg-color);
+  text-shadow: 1px 1px 5px black;
+  width: 40%;
+  text-align: center;
+}
+
+.navigation {
+  font-family: var(--roboto-font);
+  font-size: 1.3rem;
+  width: 40%;
+}
+
+.navigation .links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.link-icon {
+  font-size: 1.2rem;
+}
