@@ -1,0 +1,11 @@
+.movieCatalog {
+  width: 80vw;
+  margin: auto;
+  display: grid;
+  grid: auto-flow / 1fr 1fr 1fr;
+}
+
+.movieCatalog .movieItem {
+  width: 90%;
+  margin-top: 2rem;
+}

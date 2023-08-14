@@ -1,9 +1,9 @@
 import Card from '../UI/Card'
 import './MovieItem.css'
 
-const MovieItem = ({ name, imageUrl, year, synopsis }) => {
+const MovieItem = ({ name, imageUrl, year, synopsis, className }) => {
   return (
-    <Card>
+    <Card className={className}>
       <div className='movieTitle'>
         <h2>{name}</h2>
       </div>

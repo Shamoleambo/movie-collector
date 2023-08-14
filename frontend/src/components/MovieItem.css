@@ -1,3 +1,10 @@
+.imageContainer {
+  width: inherit;
+  margin: auto;
+}
+
 .imageContainer img {
-  max-width: 600px;
+  width: inherit;
+  display: block;
+  margin: auto;
 }
