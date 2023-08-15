@@ -1,13 +1,17 @@
-import Header from './components/Header'
-import MovieCatalog from './components/MovieCatalog'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import MovieCatalog from './pages/MovieCatalog'
+import RootLayout from './pages/Root'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [{ path: '/', element: <MovieCatalog /> }]
+  }
+])
 
 function App() {
-  return (
-    <>
-      <Header />
-      <MovieCatalog />
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

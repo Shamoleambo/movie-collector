@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import MovieItem from './MovieItem'
+import MovieItem from '../components/MovieItem'
 import './MovieCatalog.css'
 
 const MovieCatalog = () => {
