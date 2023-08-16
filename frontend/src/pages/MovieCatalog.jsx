@@ -21,6 +21,7 @@ const MovieCatalog = () => {
         <MovieItem
           className='movieItem'
           key={movie._id}
+          id={movie._id}
           name={movie.name}
           imageUrl={movie.imageUrl}
           year={movie.year}
