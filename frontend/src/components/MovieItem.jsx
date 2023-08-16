@@ -1,14 +1,21 @@
+import { useNavigate } from 'react-router-dom'
 import Card from '../UI/Card'
 import './MovieItem.css'
 
-const MovieItem = ({ name, imageUrl, year, synopsis, className }) => {
+const MovieItem = ({ id, name, imageUrl, year, synopsis, className }) => {
+  const navigate = useNavigate()
+
+  const navigationHandler = () => {
+    navigate(`/movies/${id}`)
+  }
+
   return (
     <Card className={className}>
-      <div className='movieTitle'>
+      <div className='movieTitle' onClick={navigationHandler}>
         <h2>{name}</h2>
       </div>
       <hr />
-      <div className='imageContainer'>
+      <div className='imageContainer' onClick={navigationHandler}>
         <img src={imageUrl} alt={name} />
       </div>
       <hr />
