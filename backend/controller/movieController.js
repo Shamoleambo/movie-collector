@@ -29,3 +29,10 @@ export const getMovies = asyncHandler(async (req, res) => {
 
   res.status(200).json({ movies })
 })
+
+export const getMovie = asyncHandler(async (req, res) => {
+  const movieId = req.params.id
+  const movie = await Movie.findById(movieId).select('-createdAt -updatedAt')
+
+  res.status(200).json({ ...movie._doc })
+})
