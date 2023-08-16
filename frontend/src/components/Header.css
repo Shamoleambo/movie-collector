@@ -8,6 +8,7 @@
 
 .pageTitle {
   font-family: var(--rem-font);
+  font-size: 4rem;
   color: var(--fourth-bg-color);
   text-shadow: 1px 1px 5px black;
   width: 40%;

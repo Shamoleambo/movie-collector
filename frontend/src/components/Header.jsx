@@ -7,9 +7,7 @@ const Header = () => {
   return (
     <header className='header'>
       <div className='pageTitle'>
-        <h1>
-          <Link to='/'>Movie Collector</Link>
-        </h1>
+        <Link to='/'>Movie Collector</Link>
       </div>
       <nav className='navigation'>
         <ul className='links'>
