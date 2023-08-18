@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import './MoviePage.css'
+import MovieItem from '../components/MovieItem'
+import Card from '../UI/Card'
+// import './MoviePage.css'
 
 const MoviePage = () => {
   const [movie, setMovie] = useState({})
@@ -17,22 +19,17 @@ const MoviePage = () => {
   }, [params])
 
   return (
-    <div className='movieDetails'>
-      <div className='movieTitle'>
-        <h1>{movie.name}</h1>
-      </div>
-      <div className='imageContainer'>
-        <img src={movie.imageUrl} alt={`${movie.name} cover art`} />
-      </div>
-      <div className='info'>
-        <div className='yearContainer'>
-          <span className='year'>Year: {movie.year}</span>
-        </div>
-        <div className='synopsisContainer'>
-          <span className='synopsis'>Synopsis: {movie.synopsis}</span>
-        </div>
-      </div>
-    </div>
+    <Card cardType='big'>
+      <MovieItem
+        key={movie._id}
+        type='big'
+        id={movie._id}
+        name={movie.name}
+        imageUrl={movie.imageUrl}
+        year={movie.year}
+        synopsis={movie.synopsis}
+      />
+    </Card>
   )
 }
 

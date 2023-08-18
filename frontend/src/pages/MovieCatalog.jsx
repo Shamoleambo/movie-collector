@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import MovieItem from '../components/MovieItem'
 import './MovieCatalog.css'
+import Card from '../UI/Card'
 
 const MovieCatalog = () => {
   const [movies, setMovies] = useState([])
@@ -18,15 +19,16 @@ const MovieCatalog = () => {
   return (
     <div className='movieCatalog'>
       {movies.map((movie) => (
-        <MovieItem
-          className='movieItem'
-          key={movie._id}
-          id={movie._id}
-          name={movie.name}
-          imageUrl={movie.imageUrl}
-          year={movie.year}
-          synopsis={movie.synopsis}
-        />
+        <Card type='small' key={movie._id}>
+          <MovieItem
+            type='small'
+            id={movie._id}
+            name={movie.name}
+            imageUrl={movie.imageUrl}
+            year={movie.year}
+            synopsis={movie.synopsis}
+          />
+        </Card>
       ))}
     </div>
   )

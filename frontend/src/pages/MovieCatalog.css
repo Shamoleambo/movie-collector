@@ -4,12 +4,5 @@
   margin: 1rem auto;
   /* border: 5px solid var(--fourth-bg-color); */
   display: grid;
-  grid: auto-flow / 1fr 1fr 1fr;
-}
-
-.movieCatalog .movieItem {
-  width: 80%;
-  margin: 1rem auto;
-  background-color: white;
-  border: 2px solid var(--fourth-bg-color);
+  grid: auto-flow / 1fr 1fr 1fr 1fr;
 }

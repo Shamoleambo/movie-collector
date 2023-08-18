@@ -1,12 +1,30 @@
+.movieItemSmall {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieItemBig {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divider {
+  border: 4px solid var(--third-bg-color);
+  width: 90%;
+}
+
 .imageContainer {
   width: inherit;
-  margin: auto;
 }
 
 .imageContainer img {
   width: inherit;
   display: block;
-  margin: 1rem auto;
+  margin: auto;
 }
 
 .movieTitle,

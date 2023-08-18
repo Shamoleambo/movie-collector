@@ -1,0 +1,20 @@
+.cardSmall {
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  border: 2px solid var(--fourth-bg-color);
+  margin: 1rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+.cardBig {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  border: 2px solid var(--fourth-bg-color);
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+}
